@@ -1,4 +1,5 @@
-class ResultSearchEntity{
+
+class ResultSearchEntity {
   late final String title;
   late final String description;
   late final String image;

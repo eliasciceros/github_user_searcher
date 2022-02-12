@@ -16,13 +16,13 @@ main(){
   final repository = SearchRepositoryMock();
   final usecase = SearchByText(repository);
   
-  test("Neste teste, deve-se retornar uma lista de ResultSearchEntity", () async {
+  test("Must return a ResultSearchEntity list", () async {
 
     final result = await usecase("searchString"); // automatic execute call method
     expect (result | <ResultSearchEntity>[], isA<List<ResultSearchEntity>>());
   });
 
-  test("Neste teste, deve-se retornar o fluxo de exception InvalidSearchTextError", () async {
+  test("Must happen the InvalidSearchTextError exception flow", () async {
     final result = await usecase(""); // automatic execute call method
     expect (result.fold((l) => l, (r) => r), isA<InvalidSearchTextError>());
   });
