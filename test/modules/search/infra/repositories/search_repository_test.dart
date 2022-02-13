@@ -2,18 +2,18 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:searches_clean_arch/modules/search/domain/entities/result_search_entity.dart';
 import 'package:searches_clean_arch/modules/search/domain/errors/errors.dart';
-import 'package:searches_clean_arch/modules/search/infra/datasources/search_datasource.dart';
+import 'package:searches_clean_arch/modules/search/infra/datasources/search_datasource_interface.dart';
 import 'package:searches_clean_arch/modules/search/infra/models/result_search_model.dart';
 import 'package:searches_clean_arch/modules/search/infra/repositories/search_repository.dart';
 
-class SearchDatasourceMock implements SearchDatasource{
+class SearchDatasourceMock implements SearchDatasourceInterface{
   @override
   Future<List<ResultSearchModel>> getSearch(String searchText) async {
     return <ResultSearchModel>[];
   }
 }
 
-class SearchDatasourceErrorMock implements SearchDatasource{
+class SearchDatasourceErrorMock implements SearchDatasourceInterface{
   @override
   Future<List<ResultSearchModel>> getSearch(String searchText) {
     throw Exception();

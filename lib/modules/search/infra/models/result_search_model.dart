@@ -20,9 +20,9 @@ class ResultSearchModel extends ResultSearchEntity {
 
   factory ResultSearchModel.fromMap(Map<String, dynamic> map) {
     return ResultSearchModel(
-      title: map['title'],
-      description: map['description'],
-      image: map['image'],
+      title: map['title'] ?? '',
+      description: map['description'] ?? '',
+      image: map['image'] ?? '',
     );
   }
 
