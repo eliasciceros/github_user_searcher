@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:searches_clean_arch/modules/search/domain/errors/errors.dart';
 import 'package:searches_clean_arch/modules/search/infra/datasources/search_datasource_interface.dart';
 import 'package:searches_clean_arch/modules/search/infra/models/result_search_model.dart';

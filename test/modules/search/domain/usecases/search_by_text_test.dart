@@ -5,6 +5,7 @@ import 'package:searches_clean_arch/modules/search/domain/errors/errors.dart';
 import 'package:searches_clean_arch/modules/search/domain/repositories/search_repository_interface.dart';
 import 'package:searches_clean_arch/modules/search/domain/usecases/search_by_text.dart';
 
+// Mock by hand for practice
 class SearchRepositoryMock implements SearchRepositoryInterface{
   @override
   Future<Either<FailureSearchInterface, List<ResultSearchEntity>>> search(String searchText) async {

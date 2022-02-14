@@ -6,6 +6,7 @@ import 'package:searches_clean_arch/modules/search/infra/datasources/search_data
 import 'package:searches_clean_arch/modules/search/infra/models/result_search_model.dart';
 import 'package:searches_clean_arch/modules/search/infra/repositories/search_repository.dart';
 
+// Mock by hand for practice
 class SearchDatasourceMock implements SearchDatasourceInterface{
   @override
   Future<List<ResultSearchModel>> getSearch(String searchText) async {
