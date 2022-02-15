@@ -12,17 +12,17 @@ class ResultSearchModel extends ResultSearchEntity {
 
   Map<String, dynamic> toMap() {
     return {
-      'title': title,
-      'description': description,
-      'image': image,
+      'login': title,
+      'url': description,
+      'avatar_url': image,
     };
   }
 
   factory ResultSearchModel.fromMap(Map<String, dynamic> map) {
     return ResultSearchModel(
-      title: map['title'] ?? '',
-      description: map['description'] ?? '',
-      image: map['image'] ?? '',
+      title: map['login'] ?? '',
+      description: map['url'] ?? '',
+      image: map['avatar_url'] ?? '',
     );
   }
 
