@@ -1,16 +1,22 @@
-# searches_clean_arch
+# Github User Searcher
+A Flutter app to practice Clean Architecture.
 
-A Flutter project to practice Clean Architecture. It's based on the Flutter Week | Clean Architecture of Flutterando.
+## Versões
+1. Flutter: 2.10.2
+2. Android SDK: 32.0.0
 
-## Getting Started
+## Features
+1. Clean Architecture
+2. Clean Code
+3. SOLID
+4. Asynchronous Requests (Future)
+5. Functional programming (Dart, handling errors in external requests)
+6. Unit tests
+7. Integration tests
+8. Dependency Injection  (with Flutter Modular)
+9. API consumption (Dio)
+10. Extensions
+11. State management (Bloc)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Inspirations
+- It's based on the Flutter Week | Clean Architecture of Flutterando.
