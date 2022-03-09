@@ -1,5 +1,7 @@
 const githubBaseUrl = "https://api.github.com/search/users?q=";
 
+const githubPerPageLimit = 30;
+
 const githubResultExample = """
 {
   "total_count": 1,

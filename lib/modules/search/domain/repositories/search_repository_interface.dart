@@ -5,5 +5,5 @@ import '../errors/errors.dart';
 
 // Only interface of repositories comes to Domain layer
 abstract class SearchRepositoryInterface{
-  Future<Either<FailureSearchInterface, List<ResultSearchEntity>>> search(String searchText);
+  Future<Either<FailureSearchInterface, List<ResultSearchEntity>>> search(String searchText, {int page = 1});
 }

@@ -10,11 +10,11 @@ class SearchByText implements SearchByTextInterface{
   SearchByText(this.repository);
 
   @override
-  Future<Either<FailureSearchInterface, List<ResultSearchEntity>>> call(String searchText) async {
+  Future<Either<FailureSearchInterface, List<ResultSearchEntity>>> call(String searchText, {int page = 1}) async {
     if (searchText.isEmpty){
       return Left(InvalidSearchTextError());
     }
 
-    return repository.search(searchText);
+    return repository.search(searchText, page: page);
   }
 }

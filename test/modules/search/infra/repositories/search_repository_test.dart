@@ -9,14 +9,14 @@ import 'package:searches_clean_arch/modules/search/infra/repositories/search_rep
 // Mock by hand for practice
 class SearchDatasourceMock implements SearchDatasourceInterface{
   @override
-  Future<List<ResultSearchModel>> getSearch(String searchText) async {
+  Future<List<ResultSearchModel>> getSearch(String searchText, {int page = 1}) async {
     return <ResultSearchModel>[];
   }
 }
 
 class SearchDatasourceErrorMock implements SearchDatasourceInterface{
   @override
-  Future<List<ResultSearchModel>> getSearch(String searchText) {
+  Future<List<ResultSearchModel>> getSearch(String searchText, {int page = 1}) {
     throw Exception();
   }
 }

@@ -1,7 +1,7 @@
 # Github User Searcher
 A Flutter app to practice Clean Architecture.
 
-## Versões
+## Versions
 1. Flutter: 2.10.2
 2. Android SDK: 32.0.0
 

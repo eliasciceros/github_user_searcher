@@ -18,16 +18,15 @@ class GithubDatasource implements SearchDatasourceInterface{
   GithubDatasource(this.dio);
 
   @override
-  Future<List<ResultSearchModel>> getSearch(String searchText) async {
-    final response = await dio.get("$githubBaseUrl${searchText.normalize()}");
+  Future<List<ResultSearchModel>> getSearch(String searchText, {int page = 1}) async {
+    final response = await dio.get("$githubBaseUrl${searchText.normalize()}&per_page=$githubPerPageLimit&page=$page");
 
     if (response.statusCode == 200){
-      final resultList = (response.data["items"] as List).map((e) => ResultSearchModel.fromMap(e)).toList();
-      return resultList;
+      return (response.data["items"] as List).map((e) => ResultSearchModel.fromMap(e)).toList();
     }
     // We already uses try catch on Repository implementation, so we don't need it here.
     else {
-      throw DatasourceError(message: "Datasource retrieve error");
+      throw DatasourceError(message: "Datasource retrieve error. StatusCode = ${response.statusCode}. StatusMessage = ${response.statusMessage}");
     }
   }
 }

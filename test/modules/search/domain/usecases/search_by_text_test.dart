@@ -8,23 +8,23 @@ import 'package:searches_clean_arch/modules/search/domain/usecases/search_by_tex
 // Mock by hand for practice
 class SearchRepositoryMock implements SearchRepositoryInterface{
   @override
-  Future<Either<FailureSearchInterface, List<ResultSearchEntity>>> search(String searchText) async {
+  Future<Either<FailureSearchInterface, List<ResultSearchEntity>>> search(String searchText, {int page = 1}) async {
     return const Right(<ResultSearchEntity>[]);
   }
 }
 
 main(){
   final repository = SearchRepositoryMock();
-  final usecase = SearchByText(repository);
+  final useCase = SearchByText(repository);
   
   test("Must return a ResultSearchEntity list", () async {
 
-    final result = await usecase("searchString"); // automatic execute call method
+    final result = await useCase("searchString"); // automatic execute call method
     expect (result | <ResultSearchEntity>[], isA<List<ResultSearchEntity>>());
   });
 
   test("Must happen the InvalidSearchTextError exception flow", () async {
-    final result = await usecase(""); // automatic execute call method
+    final result = await useCase(""); // automatic execute call method
     expect (result.fold((l) => l, (r) => r), isA<InvalidSearchTextError>());
   });
 }
